@@ -1,0 +1,63 @@
+{
+  "name": "next-tmp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "env-cmd -f .env.locals next dev",
+    "build": "env-cmd -f .env.locals next build && next export",
+    "build:sandbox": "env-cmd -f .env.sandbox next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "lint:precommit": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
+    "fmt:precommit": "prettier -l './**/*.{js,jsx,ts,tsx,json,css,scss}'",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.9",
+    "@hookform/error-message": "^2.0.1",
+    "@next/font": "13.1.2",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
+    "@types/react-datepicker": "^4.8.0",
+    "@types/react-dom": "18.0.10",
+    "aws-amplify": "^5.0.11",
+    "aws-amplify-react": "^5.1.43",
+    "axios": "^1.2.4",
+    "env-cmd": "^10.1.0",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2",
+    "luxon": "^3.2.1",
+    "next": "13.1.2",
+    "react": "18.2.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.42.1",
+    "react-icons": "^4.7.1",
+    "react-toastify": "^9.1.1",
+    "tailwind-override": "^0.6.1",
+    "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.2.0",
+    "autoprefixer": "^10.4.13",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-tailwindcss": "^3.8.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "postcss": "^8.4.21",
+    "postcss-nested": "^6.0.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.4"
+  }
+}
